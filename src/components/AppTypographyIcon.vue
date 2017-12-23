@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>SVG Icon System</h1>
+  <section>
+    <h2>Regular Icons</h2>
     <p>
       <!--you can pass in a smaller width and height as props-->
       <icon-base width="12" height="12"><icon-write /></icon-base> 
@@ -23,7 +23,7 @@
       <icon-base><icon-moon /></icon-base>
       <icon-base><icon-box /></icon-base>
     </p>
-  </div>
+  </section>
 </template>
 
 <script>
