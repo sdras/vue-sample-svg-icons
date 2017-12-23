@@ -1,17 +1,15 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+    <typography />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import Typography from './components/Typography'
 
 export default {
-  name: 'app',
   components: {
-    HelloWorld
+    Typography
   }
 }
 </script>
@@ -32,6 +30,6 @@ h2,
 h3,
 h4,
 h5 {
-  font-weight: 700;
+  font-weight: 800;
 }
 </style>
