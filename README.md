@@ -1,10 +1,10 @@
-# svg-icons
+# Sample SVG Icon usage for Vue.js
 
-> A Vue.js project
+A demo to show how I prefer to set up an SVG icon system in Vue.js. You don't have to do it this way, it's an opinionated example. More details for _why_ it's set up in this manner in the Vue Cookbook.
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
