@@ -5,15 +5,18 @@
       <p>Click on the icons below</p>
       <icon-scissors />
       <icon-heart-face />
+      <icon-watch />
     </section>
 </template>
 
 <script>
+import IconWatch from './animatedicons/IconWatch.vue'
 import IconScissors from './animatedicons/IconScissors.vue'
 import IconHeartFace from './animatedicons/IconHeartFace.vue'
 
 export default {
   components: {
+    IconWatch,
     IconScissors,
     IconHeartFace
   }
