@@ -68,7 +68,7 @@ h2 {
 a,
 a:visited,
 a:hover {
-  color: rgb(192, 192, 192);
+  color: #949090;
   text-decoration: none;
   font-weight: 700;
 }
