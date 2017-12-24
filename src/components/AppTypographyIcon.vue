@@ -19,7 +19,6 @@
     </p>
     <p>
       <!--because the base is consistent, you can use multiple icons on the same line and they're all in order-->
-      <icon-base><icon-box /></icon-base>
       <icon-base><icon-moon /></icon-base>
       <icon-base><icon-write /></icon-base>
       <icon-base><icon-image /></icon-base>
@@ -27,6 +26,7 @@
       <icon-base><icon-calendar /></icon-base>
       <icon-base><icon-envelope /></icon-base>
       <br>
+      <icon-base><icon-box /></icon-base>
       You can use whatever icon you want and keep the base consistent with slots
     </p>
   </section>
