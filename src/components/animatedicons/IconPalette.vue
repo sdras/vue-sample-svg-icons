@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import { TimelineMax, Circ } from 'gsap'
+import { TimelineMax, Sine, Back } from 'gsap'
 
 export default {
   methods: {
@@ -64,7 +64,7 @@ export default {
           rotation: 20,
           x: 20,
           transformOrigin: '50% 50%',
-          ease: Sine.easeInOut
+          ease: Back.easeOut
         },
         'start'
       )
@@ -73,14 +73,14 @@ export default {
       this.mPBack(tl, '#dark')
       tl.to(
         '#pen',
-        0.5,
+        0.4,
         {
           rotation: 0,
           x: 0,
           transformOrigin: '50% 50%',
           ease: Sine.easeIn
         },
-        'start+=0.6'
+        'start+=0.7'
       )
     },
     mPalette(tl, el, rot) {
@@ -91,7 +91,7 @@ export default {
           rotation: rot,
           x: 5,
           svgOrigin: '49 82',
-          ease: Sine.easeOut
+          ease: Back.easeOut
         },
         `start`
       )
@@ -99,14 +99,14 @@ export default {
     mPBack(tl, el) {
       tl.to(
         el,
-        0.5,
+        0.4,
         {
           rotation: 0,
           x: 0,
           svgOrigin: '49 82',
           ease: Sine.easeIn
         },
-        `start+=0.6`
+        `start+=0.7`
       )
     }
   }
