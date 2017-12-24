@@ -5,7 +5,10 @@
     width="100" 
     height="100" 
     viewBox="0 0 120 120"
+    aria-labelledby="heartface"
+    role="presentation"
     >
+    <title id="heartface" lang="en">Smiley face that turns into heart eyes</title>
     <defs>
       <linearGradient id="linear-gradient" x1="55.09" y1="8.79" x2="55.09" y2="95.5" gradientTransform="matrix(1 0 0 -1 10 112)" gradientUnits="userSpaceOnUse">
         <stop offset="0" stop-color="#f9a65d"/>

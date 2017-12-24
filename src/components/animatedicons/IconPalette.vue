@@ -5,7 +5,10 @@
     width="100" 
     height="100" 
     viewBox="0 0 100 100"
+    aria-labelledby="palette"
+    role="presentation"
     >
+    <title id="palette" lang="en">Animated Color palette</title>
     <path id="bk" fill="#fff" d="M0 0h100v100H0z"/>
     <g id="palette">
       <g id="dark">
