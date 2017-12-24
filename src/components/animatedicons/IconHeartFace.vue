@@ -122,10 +122,26 @@ export default {
       )
       tl.to(
         '#heartface',
-        0.3,
+        0.1,
         {
           opacity: 0,
           ease: Sine.easeIn
+        },
+        'start+=1.1'
+      )
+      tl.fromTo(
+        '#eyes',
+        0.1,
+        {
+          scaleY: 1,
+          transformOrigin: '50% 50%;'
+        },
+        {
+          scaleY: 0,
+          transformOrigin: '50% 50%;',
+          repeat: 3,
+          yoyo: true,
+          ease: Sine.easeInOut
         },
         'start+=1.1'
       )
