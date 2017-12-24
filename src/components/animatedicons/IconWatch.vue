@@ -51,7 +51,7 @@ export default {
 
       tl.to('#hand', 2, {
         rotation: 100,
-        svgOrigin: '53 60',
+        svgOrigin: '54 61',
         ease: Elastic.easeOut
       })
       tl.to(
@@ -59,7 +59,7 @@ export default {
         0.5,
         {
           rotation: 0,
-          svgOrigin: '53 60',
+          svgOrigin: '54 61',
           ease: Circ.easeIn
         },
         '-=1'

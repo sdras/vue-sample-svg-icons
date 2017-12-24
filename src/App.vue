@@ -27,15 +27,16 @@ html {
 }
 
 #app {
-  font-family: 'Mukta Malar', sans-serif;
+  font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #676767;
+  color: #222;
   font-weight: 300;
-  background: #f7f7f7;
+  background: #f1efef;
   width: 100vw;
   height: 100vh;
+  font-size: 17px;
 }
 
 h1,
@@ -67,7 +68,7 @@ h2 {
 a,
 a:visited,
 a:hover {
-  color: #0f89d6;
+  color: rgb(192, 192, 192);
   text-decoration: none;
   font-weight: 700;
 }
@@ -76,6 +77,6 @@ a:hover {
   margin-top: 0;
   font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-style: italic;
-  color: #0f89d6;
+  color: #949090;
 }
 </style>
