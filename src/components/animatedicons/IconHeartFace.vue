@@ -1,9 +1,9 @@
 <template>
-  <svg 
-    @click="makeHeart"
-    xmlns="http://www.w3.org/2000/svg" 
-    width="100" 
-    height="100" 
+  <svg
+    v-stream:click="heartStream$"
+    xmlns="http://www.w3.org/2000/svg"
+    width="100"
+    height="100"
     viewBox="0 0 120 120"
     aria-labelledby="heartface"
     role="presentation"
@@ -53,6 +53,23 @@
 import { TweenMax, TimelineMax, Sine } from 'gsap'
 
 export default {
+  domStreams: ['heartStream$'], // vue-rx / RxJS Subject
+  subscriptions () { // vue-rx
+    return {
+      heartAnimation$: this.heartStream$
+        .filter(() => !this.locked)
+        .do(() => {
+          this.makeHeart()
+          // Lock the stream, do not fire anymore!
+          this.locked = true
+        })
+    }
+  },
+  data: () => {
+    return {
+      locked: false
+    }
+  },
   methods: {
     makeHeart() {
       TweenMax.set('#heartface', {
@@ -60,6 +77,9 @@ export default {
       })
 
       const tl = new TimelineMax()
+
+      // Unlock the stream after the timeline completes
+      tl.eventCallback('onComplete', () => this.locked = false)
 
       tl.add('start')
       tl.fromTo(

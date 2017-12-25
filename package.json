@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "node-sass": "^4.7.2",
+    "rxjs": "^5.5.6",
     "sass-loader": "^6.0.6",
-    "vue": "^2.5.2"
+    "vue": "^2.5.2",
+    "vue-rx": "^5.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
