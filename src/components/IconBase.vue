@@ -3,10 +3,10 @@
     :width="width" 
     :height="height" 
     viewBox="0 0 18 18" 
-    aria-labelledby="iconName" 
+    :aria-labelledby="iconName" 
     role="presentation"
   >
-    <title id="iconName" lang="en">{{iconName}} icon</title>
+    <title :id="iconName" lang="en">{{iconName}} icon</title>
     <g fill="currentColor">
       <slot />
     </g>
