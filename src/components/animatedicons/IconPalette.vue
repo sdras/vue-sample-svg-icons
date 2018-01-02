@@ -11,21 +11,21 @@
     <title id="palette" lang="en">Animated Color palette</title>
     <path id="bk" fill="#fff" d="M0 0h100v100H0z"/>
     <g id="palette">
-      <g id="dark">
+      <g ref="dark">
         <path transform="rotate(-64.1 71.508 54.997)" fill="#fff" d="M33.3 42.8h76.3v24.23H33.3z"/>
         <path d="M65 93.5L41.8 82.2l33.9-70L99 23.5zm-21.1-12l20.4 9.9 32.5-67.2-20.3-9.9z" fill="#7f746b"/>
         <path transform="rotate(-64.1 81.575 30.396)" fill="#577f7c" d="M72.5 21.4h18.1v18.05H72.5z"/>
         <path transform="rotate(-64.1 72.191 49.644)" fill="#426662" d="M63.2 40.6h18.1v18.06H63.2z"/>
         <path transform="rotate(-64.1 62.888 68.943)" fill="#375954" d="M53.8 59.9h18.1v18.05H53.8z"/>
       </g>
-      <g id="med">
+      <g ref="med">
         <path transform="rotate(-78.9 57.558 49.808)" fill="#fff" d="M19.4 37.7h76.3v24.23H19.4z"/>
         <path d="M61.1 88.7l-25.3-5 15-76.4 25.4 5zm-23.4-6.2l22.2 4.3 14.4-73.2-22.2-4.4z" fill="#7f746b"/>
         <path transform="rotate(-78.9 61.042 23.53)" fill="#88bcbc" d="M52 14.5h18.1v18.05H52z"/>
         <path transform="rotate(-78.9 56.93 44.502)" fill="#78a8a7" d="M47.9 35.5H66v18.05H47.9z"/>
         <path transform="rotate(-78.9 52.758 65.425)" fill="#659391" d="M43.8 56.4h18.1v18.05H43.8z"/>
       </g>
-      <g id="light">
+      <g ref="light">
         <path fill="#fff" d="M28 9.6h24.2v76.25H28z"/>
         <path d="M51.2 85.2H25.3V7.4h25.9zm-24.3-1.6h22.6V9H26.9z" fill="#7f746b"/>
         <path fill="#a2dade" d="M29.5 12.2h18.1v18.05H29.5z"/>
@@ -33,7 +33,7 @@
         <path fill="#d0fcfb" d="M29.5 55h18.1v18.05H29.5z"/>
       </g>
     </g>
-    <g id="pen">
+    <g ref="pen">
       <path transform="rotate(-54.1 25.93 61.88)" fill="#a2dade" d="M-7.7 59.1h67.2v5.53H-7.7z"/>
       <path d="M8.3 91.8l-5.4-3.9 40-55.3 5.3 3.8zm-3.9-4.1L8 90.3l38.7-53.6-3.6-2.6z" fill="#7f746b"/>
       <path d="M35.6 53.1l11.9-16.5-4.5-3.3-11.9 16.5z" fill="#fff"/>
@@ -57,11 +57,11 @@ export default {
 
       //pick up here
       tl.add('start')
-      this.mPalette(tl, '#light', -5)
-      this.mPalette(tl, '#med', -15)
-      this.mPalette(tl, '#dark', -25)
+      this.mPalette(tl, this.$refs.light, -5)
+      this.mPalette(tl, this.$refs.med, -15)
+      this.mPalette(tl, this.$refs.dark, -25)
       tl.to(
-        '#pen',
+        this.$refs.pen,
         0.6,
         {
           rotation: 20,
@@ -71,11 +71,11 @@ export default {
         },
         'start'
       )
-      this.mPBack(tl, '#light')
-      this.mPBack(tl, '#med')
-      this.mPBack(tl, '#dark')
+      this.mPBack(tl, this.$refs.light)
+      this.mPBack(tl, this.$refs.med)
+      this.mPBack(tl, this.$refs.dark)
       tl.to(
-        '#pen',
+        this.$refs.pen,
         0.4,
         {
           rotation: 0,
@@ -115,7 +115,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

@@ -30,7 +30,7 @@
       <circle cx="34.4" cy="64" r="1.1"/>
       <circle cx="35.8" cy="53.7" r="1.1"/>
     </g>
-    <g fill="#7f746b" id="hand">
+    <g fill="#7f746b" ref="hand">
       <circle cx="54.1" cy="61.9" r="1.7"/>
       <path d="M58.5 54.9L44.2 80.6l13.2-26.3 1.1.6z"/>
     </g>
@@ -52,13 +52,13 @@ export default {
     watchStart() {
       var tl = new TimelineMax()
 
-      tl.to('#hand', 2, {
+      tl.to(this.$refs.hand, 2, {
         rotation: 100,
         svgOrigin: '54 61',
         ease: Elastic.easeOut
       })
       tl.to(
-        '#hand',
+        this.$refs.hand,
         0.5,
         {
           rotation: 0,
