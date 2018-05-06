@@ -5,6 +5,7 @@
     viewBox="0 0 18 18" 
     :aria-labelledby="iconName" 
     role="presentation"
+    class='align-middle'
   >
     <title :id="iconName" lang="en">{{iconName}} icon</title>
     <g :fill="iconColor">
